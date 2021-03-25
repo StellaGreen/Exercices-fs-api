@@ -1,21 +1,23 @@
+const fs = require('fs')
 
-	switch (process.argv.length) {
-	case 2 :
-	console.log(`usage : node echo.js word word word`)
-	process.exit(1)
-	case 3 :
-	    console.log(`${process.argv[2]}`)
-    break
-    case 4 :
-        console.log(`${process.argv[2]} ${process.argv[3]}`)
-	break
-    case 5 :
-        console.log(`${process.argv[2]} ${process.argv[3]} ${process.argv[4]}`)
-    break
-    case 6 :
-        console.group(`${process.argv[2]} ${process.argv[3]} ${process.argv[4]} ${process.argv[5]}`)
-    break
-	default:
-        console.log(`command not found`)
-        process.exit(1)
-	}
+// check if command line is well 
+if (process.argv.length < 4) {
+    console.log(/*commentaire*/)
+    process.exit(1)
+}
+
+  // check if the path exist
+if (!fs.existsSync(process.argv[2])) {
+    console.log(`Désoler ${process.argv[2]} n\'existe pas`)
+    process.exit(1)
+}
+
+  //check if the value is a file or a directory (you choose)
+const stats = fs.statSync(process.argv[2])
+
+if (!stats.isFile(process.argv[2])) {
+    console.log(`${process.argv[2]} n\'est pas un fichier`)
+    process.exit(1)
+}
+
+console.log(process.argv[2], process.arg[3]);
