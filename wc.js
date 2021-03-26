@@ -1,5 +1,6 @@
 const fs = require('fs')
-const txt = fs.readFileSync(process.argv[2], 'utf-8')
+
+const txt = fs.readFileSync(process.argv[2], 'utf-8') // read the file
 const tabn = txt.split('\n') // string to array of lines
 const conline = tabn.length // count lines of array  ------------------------------------------- count lines
 const tabtout = txt.split('') // separate all elements of the string
