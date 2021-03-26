@@ -1,20 +1,20 @@
 const fs = require('fs')
 const txt = fs.readFileSync(process.argv[2], 'utf-8')
-const tabn = txt.split('\n') // met en tableau les lignes
-const conline = tabn.length // compte les lignes du tableau ------------------------------------- compte ligne
-const tabtout = txt.split('') // sépare l'integralité des éléments de du texte en tableau
-const contout = tabtout.length // compte l'integralité du fichier --------------------------------compte tout
-const join = tabn.join(' ') // fonctionne
-const tabe = join.split('.') // a enlever les espaces 
-const joine = tabe.join(' ') // fonctionne
-const tabepoint = joine.split(';') // a enlever les points virgules
-const joinepoint = tabepoint.join(' ') // fonctionne
-const tabexla = joinepoint.split('!') // a enlever les ponits d'exclamations
-const joinexcla = tabexla.join(' ') // fonctionne
-const tabevirg = joinexcla.split(',') // a enlever les virgules
-const joinvirg = tabevirg.join(' ') // fonctionne
-const tabclean = joinvirg.split(' ') // sépare chaque mots 
-const contword = tabclean.length // nombre de mots dans le fichier ----------------------------- compte mots
+const tabn = txt.split('\n') // string to array of lines
+const conline = tabn.length // count lines of array  ------------------------------------------- count lines
+const tabtout = txt.split('') // separate all elements of the string
+const contout = tabtout.length // count all  --------------------------------------------------- count all
+const join = tabn.join(' ') // join with a space
+const tabe = join.split('.') // remove stitches
+const joine = tabe.join(' ') // join with a space
+const tabepoint = joine.split(';') // remove semicolons
+const joinepoint = tabepoint.join(' ') // join with a space
+const tabexla = joinepoint.split('!') // remove the exclamation marks
+const joinexcla = tabexla.join(' ') // join with a space
+const tabevirg = joinexcla.split(',') // remove commas
+const joinvirg = tabevirg.join(' ') // join with a space
+const tabclean = joinvirg.split(' ') // separate each word 
+const contword = tabclean.length // number of words in the file -------------------------------- count word
 
 //check command line
 if (process.argv.length < 3 || process.argv.length > 4) {
@@ -37,7 +37,7 @@ if (!stats.isFile(process.argv[2])) {
 }
 
 
-//if have juste 2 arguments :
+//if command have juste 2 arguments :
 if(process.argv.length === 3){
     console.log(`${contword}  ${conline}  ${contout}  ${process.argv[2]}`)
 }

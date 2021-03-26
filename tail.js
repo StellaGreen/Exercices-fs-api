@@ -23,10 +23,10 @@ if(process.argv.length === 3){
     const txt = fs.readFileSync(process.argv[2], 'utf-8') //read file
     const tab = txt.split('\n') // array of line
     const rv = tab.reverse() // reverse the array
-    const choose = rv.slice(0, 10)
-    const rv2 = choose.reverse()
-    const joinfinal = rv2.join('\n')
-    console.log(joinfinal)
+    const choose = rv.slice(0, 10) // choose to line 1 at 10
+    const rv2 = choose.reverse() // reverse the lines chooses
+    const joinfinal = rv2.join('\n') // array to string of lines
+    console.log(joinfinal) // result
 }
 
 //if have 5 arguments :
@@ -45,8 +45,8 @@ if(process.argv[2] === '-n'){
     const txt = fs.readFileSync(process.argv[4], 'utf-8') //read file
     const tab = txt.split('\n') // array of line
     const rv = tab.reverse() // reverse the array
-    const choosesp = rv.slice(0, process.argv[3])
-    const rv2v2 = choosesp.reverse()
-    const joinfinal2 = rv2v2.join('\n')
-    console.log(joinfinal2)
+    const choosesp = rv.slice(0, process.argv[3]) // choose line 1 at you like
+    const rv2v2 = choosesp.reverse() // reverse lines chooses
+    const joinfinal2 = rv2v2.join('\n') // array to sting of lines
+    console.log(joinfinal2) // result
 }
