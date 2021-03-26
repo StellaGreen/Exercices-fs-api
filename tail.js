@@ -6,7 +6,7 @@ if (process.argv.length < 3 || process.argv.length > 5) {
     process.exit(1)
 }
 
-//if have just 3 arguments :
+//if the command have just 3 arguments :
 if(process.argv.length === 3){
 
     //check if file exist
@@ -29,7 +29,7 @@ if(process.argv.length === 3){
     console.log(joinfinal) // result
 }
 
-//if have 5 arguments :
+//if the command have 5 arguments :
 if(process.argv[2] === '-n'){
     //check if file exist
     if (!fs.existsSync(process.argv[4])) {

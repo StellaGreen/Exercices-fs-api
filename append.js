@@ -12,11 +12,11 @@ for(let i= 2; i < process.argv.length -1; ++i){
 
     // check if the path exist
     if (!fs.existsSync(process.argv[i])) {
-    console.log(`The file ${process.argv[i]} does'nt exist`)
+    console.log(`The file ${process.argv[i]} doesn't exist`)
     process.exit(1)
     }
 
-    //check if the value is a file or a directory (you choose)
+    //check if the value is a file or a directory
     const stats = fs.statSync(process.argv[i])
 
     if (!stats.isFile(process.argv[i])) {
