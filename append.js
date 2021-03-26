@@ -4,11 +4,11 @@ let ForFile = ''
 
     // check if command line is well 
 if (process.argv.length < 4) {
-    console.log(`Error`)
+    console.log(`Usage : node append.js file(s) filedirection`)
     process.exit(1)
 }
 
-for(i= 2; i < process.argv.length -1; ++i){
+for(let i= 2; i < process.argv.length -1; ++i){
 
     // check if the path exist
     if (!fs.existsSync(process.argv[i])) {

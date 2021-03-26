@@ -1,5 +1,10 @@
 const fs = require('fs')
 
-const txt = fs.readFileSync(process.argv[2], 'utf-8')
+const txt = fs.readFileSync('file.txt', 'utf-8')
 const tab = txt.split('\n')
-console.log(`${tab}`.length)
+//const count = tab.length
+const rv = tab.reverse()
+
+
+console.log(rv)
+
