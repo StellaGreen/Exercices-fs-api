@@ -1,5 +1,17 @@
 const fs = require('fs')
 
+//check command line
+if (process.argv.length < 3 || process.argv.length > 4) {
+    console.log('Usage : node wc.js file.txt')
+    process.exit(1)
+}
+
+//check if file exist
+if (!fs.existsSync(process.argv[2])) {
+    console.log(`Sorry ${process.argv[2]} doesn't exist`)
+    process.exit(1)
+}
+
 const txt = fs.readFileSync(process.argv[2], 'utf-8') // read the file
 const tabn = txt.split('\n') // string to array of lines
 const conline = tabn.length // count lines of array  ------------------------------------------- count lines
@@ -16,18 +28,6 @@ const tabevirg = joinexcla.split(',') // remove commas
 const joinvirg = tabevirg.join(' ') // join with a space
 const tabclean = joinvirg.split(' ') // separate each word 
 const contword = tabclean.length // number of words in the file -------------------------------- count word
-
-//check command line
-if (process.argv.length < 3 || process.argv.length > 4) {
-    console.log('Usage : node wc.js file.txt')
-    process.exit(1)
-}
-
-//check if file exist
-if (!fs.existsSync(process.argv[2])) {
-    console.log(`Sorry ${process.argv[2]} doesn't exist`)
-    process.exit(1)
-}
 
 // check if file is a file
 const stats = fs.statSync(process.argv[2])
