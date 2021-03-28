@@ -1,7 +1,7 @@
 const fs = require('fs')
 
 // check if command line is well 
-if (process.argv.length < 4) {
+if (process.argv.length !== 4) {
     console.log(/*commentaire*/)
     process.exit(1)
 }
