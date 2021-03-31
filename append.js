@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-let ForFile = ''
+let ForFile = process.argv.slice(-1).join()
 
     // check if command line is well 
 if (process.argv.length < 4) {
@@ -23,7 +23,6 @@ for(let i= 2; i < process.argv.length -1; ++i){
     console.log(`${process.argv[i]} is not a file`)
     process.exit(1)
     }
-    ForFile += fs.readFileSync(process.argv[i])
 }
 
 fs.appendFileSync(process.argv[process.argv -1], ForFile, 'utf8')

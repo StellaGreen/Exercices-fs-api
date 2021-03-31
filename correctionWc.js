@@ -3,13 +3,13 @@ let path = `./${process.argv[2]}`
 let fileName = process.argv[2]
 
 
-//les test 
+//test size command line
 if(process.argv.length < 3 || process.argv.length > 4){
   console.log(`Error: this command exepts only one argument`)
   process.exit(1)
 }
 
-//cas de l'option -n
+// only 4 argument in command line
 if(process.argv.length === 4){
 
   path = `./${process.argv[3]}`
