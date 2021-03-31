@@ -1,7 +1,5 @@
 const fs = require('fs')
-
 let nbLine = 10
-
 //check command line
 if (process.argv.length < 3 || process.argv.length > 5) {
     console.log('Usage : node tail.js file.txt\nOr : node tail.js -n file.txt\nOr : node tail.js -n NUMBER file.txt')
