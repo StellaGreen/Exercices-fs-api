@@ -32,11 +32,11 @@ console.log(choose.length)
 
 //check 4 arguments
 if(process.argv.length === 4){
-    if(process.argv[2] !== '-n'){
-        console.log('Usage : node tail.js -n file.txt')
-        process.exit(1)
-    }
- //check if file exist
+if(process.argv[2] !== '-n'){
+    console.log('Usage : node tail.js -n file.txt')
+    process.exit(1)
+}
+//check if file exist
 if (!fs.existsSync(process.argv[3])) {
     console.log(`Sorry ${process.argv[3]} doesn't exist`)
     process.exit(1)
