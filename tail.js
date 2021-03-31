@@ -2,7 +2,7 @@ const fs = require('fs')
 
 //check command line
 if (process.argv.length < 3 || process.argv.length > 5) {
-    console.log('Usage : node tail.js file.txt\nOr : node tail.js -n NUMBER file.txt')
+    console.log('Usage : node tail.js file.txt\nOr : node tail.js -n file.txt\nOr : node tail.js -n NUMBER file.txt')
     process.exit(1)
 }
 
