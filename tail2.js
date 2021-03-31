@@ -5,7 +5,7 @@ let file = process.argv.slice(-1).join() // choose the last argv
 const warning = 'Usage : node tail.js [-n NUMBER] file.txt' // text usage
 
 //check command line
-if (process.argv.length < 3 || process.argv.length > 5) {
+if (process.argv.length < 3 || process.argv.length > 5 || process.argv.length === 4) {
     console.log(warning)
     process.exit(1)
 }
@@ -21,11 +21,7 @@ if (!stats.isFile(file)) {
     console.log(`${file} is not a file`)
     process.exit(1)
 }
-//check 4 arguments
-if(process.argv.length === 4){
-    console.log(warning)
-    process.exit(1)
-}
+
 //if the command have 5 arguments :
 
 //check argument is valid
