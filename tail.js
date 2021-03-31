@@ -38,7 +38,7 @@ if(process.argv.length === 4){
     }
  //check if file exist
 if (!fs.existsSync(process.argv[3])) {
-    console.log(`Sorry ${process.argv[3]} doesn't exist-`)
+    console.log(`Sorry ${process.argv[3]} doesn't exist`)
     process.exit(1)
 }
 //check if the file is a file
@@ -68,7 +68,7 @@ if(process.argv[2] !== '-n'){
 if(process.argv[2] === '-n'){
 //check if file exist
 if (!fs.existsSync(process.argv[4])) {
-console.log(`Sorry ${process.argv[4]} doesn't exist--`)
+console.log(`Sorry ${process.argv[4]} doesn't exist`)
 process.exit(1)
 }
 //check if the number is a number
