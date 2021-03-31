@@ -30,7 +30,7 @@ console.log(joinfinal) // result
 console.log(choose.length)
 }
 
-//TODO : 4 ARGV
+//check 4 arguments
 if(process.argv.length === 4){
     if(process.argv[2] !== '-n'){
         console.log('Usage : node tail.js -n NUMBER file.txt')
