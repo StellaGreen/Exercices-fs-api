@@ -45,7 +45,7 @@ if(process.argv.length === 5){
         process.exit(1)
     }
     //check if the number is a number
-    if(!isNaN(process.argv[3])){
+    if(isNaN(process.argv[3])){
         console.log('Usage : node tail.js -n NUMBER file.txt')
         process.exit(1)
     }
