@@ -1,10 +1,10 @@
-const fs = require('fs')
+const fs = require('fs') // import fs
 
 let nbLine = 10 // nb line by default
 let file = process.argv.slice(-1).join() // choose the last argv
 const warning = 'Usage : node tail.js [-n NUMBER] file.txt' // text usage
-// check command line
-if (process.argv.length < 3 || process.argv.length > 5 || process.argv.length === 4) { // check if the size of argv are correct
+// check all size of command line
+if (process.argv.length < 3 || process.argv.length > 5 || process.argv.length === 4) {
     console.log(warning)
     process.exit(1)
 }
