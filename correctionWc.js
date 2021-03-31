@@ -4,7 +4,7 @@ let fileName = process.argv[2]
 
 
 //les test 
-if(process.argv.length > 4){
+if(process.argv.length < 3 || process.argv.length > 4){
   console.log(`Error: this command exepts only one argument`)
   process.exit(1)
 }
