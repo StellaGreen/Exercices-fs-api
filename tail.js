@@ -33,7 +33,7 @@ console.log(choose.length)
 //check 4 arguments
 if(process.argv.length === 4){
     if(process.argv[2] !== '-n'){
-        console.log('Usage : node tail.js -n NUMBER file.txt')
+        console.log('Usage : node tail.js -n file.txt')
         process.exit(1)
     }
  //check if file exist
