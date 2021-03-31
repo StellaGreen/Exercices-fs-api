@@ -27,6 +27,7 @@ if(process.argv.length === 3){
     const rv2 = choose.reverse() // reverse the lines chooses
     const joinfinal = rv2.join('\n') // array to string of lines
     console.log(joinfinal) // result
+    console.log(choose.length)
 }
 
 //if the command have 5 arguments :
@@ -49,4 +50,5 @@ if(process.argv[2] === '-n'){
     const rv2v2 = choosesp.reverse() // reverse lines chooses
     const joinfinal2 = rv2v2.join('\n') // array to sting of lines
     console.log(joinfinal2) // result
+    console.log(choosesp.length)
 }
