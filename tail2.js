@@ -3,13 +3,11 @@ const fs = require('fs')
 let nbLine = 10 // nb line by default
 let file = process.argv.slice(-1).join() // choose the last argv
 const warning = 'Usage : node tail.js [-n NUMBER] file.txt' // text usage
-
 //check command line
 if (process.argv.length < 3 || process.argv.length > 5 || process.argv.length === 4) {
     console.log(warning)
     process.exit(1)
 }
-
 //check if file exist
 if (!fs.existsSync(file)) {
     console.log(`Sorry ${file} doesn't exist`)
@@ -21,18 +19,9 @@ if (!stats.isFile(file)) {
     console.log(`${file} is not a file`)
     process.exit(1)
 }
-
 //if the command have 5 arguments :
-
-//check argument is valid
-if(process.argv.length === 5){
-    if(process.argv[2] !== '-n'){
-        console.log(warning)
-        process.exit(1)
-    }
-
-    //check if the number is a number
-    if(isNaN(process.argv[3])){
+if(process.argv.length === 5){  //check argument is valid
+    if(process.argv[2] !== '-n' || isNaN(process.argv[3])){
         console.log(warning)
         process.exit(1)
     }
