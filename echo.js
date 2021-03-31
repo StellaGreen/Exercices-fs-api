@@ -18,3 +18,6 @@ switch (process.argv.length) {
         console.log(`command not found`)
         process.exit(1)
 	}
+
+
+    
