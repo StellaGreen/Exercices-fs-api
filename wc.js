@@ -31,13 +31,10 @@ const contword = tabclean.length // number of words in the file ----------------
 
 // check if file is a file
 const stats = fs.statSync(process.argv[2])
-
 if (!stats.isFile(process.argv[2])) {
   console.log(`${process.argv[2]} is not a file`)
   process.exit(1)
 }
-
-
 //if command have juste 2 arguments :
 if(process.argv.length === 3){
     console.log(`${contword}  ${conline}  ${contout}  ${process.argv[2]}`)
